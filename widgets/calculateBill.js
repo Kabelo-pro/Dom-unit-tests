@@ -1,7 +1,7 @@
 
-function calculateBtnClicked(){
+function calculateBtnClicked(billType){
     // get the string entered in the textArea
-    var billString = billStringElement.value.toLowerCase();
+    var billString = billType.toLowerCase();
     //split the string
     var billItems = billString.split(",");
     // a variable for the total phone bill.
@@ -19,32 +19,35 @@ function calculateBtnClicked(){
     
     //round to two decimals
     var roundedBillTotal = totalBill.toFixed(2);
-    billTotal.innerHTML = roundedBillTotal;
+    // billTotal.innerHTML = roundedBillTotal;
 
-// remove existing classes from billTotal element
-billTotal.classList.remove("warning");
-billTotal.classList.remove("danger");
+    // console.log(typeof(roundedBillTotal))
+    return Number(roundedBillTotal)
+}
+// // remove existing classes from billTotal element
+// billTotal.classList.remove("warning");
+// billTotal.classList.remove("danger");
 
-// add new classes to billTotal element
-if (totalBill > 20){
-    billTotal.classList.add("warning");
-}
-if (totalBill >= 30){
-    billTotal.classList.add("danger");
-}
+// // add new classes to billTotal element
+// if (totalBill > 20){
+//     billTotal.classList.add("warning");
+// }
+// if (totalBill >= 30){
+//     billTotal.classList.add("danger");
+// }
 
-// check if total bill has decreased and remove classes accordingly
-if (totalBill <= previousTotalBill && previousTotalBill > 20){
-    billTotal.classList.remove("danger");
-}
-if (totalBill <= previousTotalBill && previousTotalBill > 0 && previousTotalBill < 30){
-    billTotal.classList.remove("warning");
-}
+// // check if total bill has decreased and remove classes accordingly
+// if (totalBill <= previousTotalBill && previousTotalBill > 20){
+//     billTotal.classList.remove("danger");
+// }
+// if (totalBill <= previousTotalBill && previousTotalBill > 0 && previousTotalBill < 30){
+//     billTotal.classList.remove("warning");
+// }
 
-// store the current total bill for the next iteration
-previousTotalBill = totalBill;
-};
+// // store the current total bill for the next iteration
+// previousTotalBill = totalBill;
+// };
     
 
 
-calculateBtn.addEventListener('click', calculateBtnClicked)
+// calculateBtn.addEventListener('click', calculateBtnClicked)
