@@ -21,33 +21,5 @@ function calculateBtnClicked(billType){
     var roundedBillTotal = totalBill.toFixed(2);
     // billTotal.innerHTML = roundedBillTotal;
 
-    // console.log(typeof(roundedBillTotal))
     return Number(roundedBillTotal)
 }
-// // remove existing classes from billTotal element
-// billTotal.classList.remove("warning");
-// billTotal.classList.remove("danger");
-
-// // add new classes to billTotal element
-// if (totalBill > 20){
-//     billTotal.classList.add("warning");
-// }
-// if (totalBill >= 30){
-//     billTotal.classList.add("danger");
-// }
-
-// // check if total bill has decreased and remove classes accordingly
-// if (totalBill <= previousTotalBill && previousTotalBill > 20){
-//     billTotal.classList.remove("danger");
-// }
-// if (totalBill <= previousTotalBill && previousTotalBill > 0 && previousTotalBill < 30){
-//     billTotal.classList.remove("warning");
-// }
-
-// // store the current total bill for the next iteration
-// previousTotalBill = totalBill;
-// };
-    
-
-
-// calculateBtn.addEventListener('click', calculateBtnClicked)
